@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Award, Hammer, Handshake, Layers } from "lucide-react";
+import { ArrowRight, Award, Hammer, Handshake, Layers } from "lucide-react";
 
 import { CatalogSection } from "@/components/CatalogSection";
 import { ContactInfoCards, LocationMap } from "@/components/ContactBlocks";
@@ -10,6 +10,7 @@ import { Section, SectionHeading, buttonStyles } from "@/components/ui-kit";
 import { company, images, products, whyUs } from "@/data/site";
 import { cn } from "@/lib/utils";
 import HandshakeIcon from "@/components/HandshakeIcon";
+import { ShieldCheck, Wrench } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -81,7 +82,7 @@ function Pocetna() {
       </section> */}
 
       {/* HERO */}
-      <section className="relative isolate flex min-h-[85vh] items-center justify-center overflow-hidden py-12 lg:py-16">
+      <section className="relative isolate flex min-h-[70vh] items-center justify-center overflow-hidden py-12 lg:py-16">
         {/* MOBILNA POZADINA: Slika projekta s tamnim preklopom (Samo na mobitelu) */}
         <div className="absolute inset-0 z-0 lg:hidden">
           <img
@@ -96,6 +97,12 @@ function Pocetna() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
             {/* TEKST I GUMBI (Na mobitelu bijeli tekst na pozadini, na desktopu tamni tekst) */}
             <div className="max-w-2xl text-center text-white lg:col-span-6 lg:text-left lg:text-primary-deep">
+              <Reveal delay={80}>
+                <div className="mt-4 w-full flex justify-center lg:justify-start">
+                  <img src={images.trohaDilBijeli} alt="Troha-Dil" className="my-4 h-8 lg:invert" />
+                </div>
+              </Reveal>
+
               <Reveal>
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80 lg:text-primary-deep/75">
                   {company.city} · Dalmacija
@@ -103,7 +110,7 @@ function Pocetna() {
               </Reveal>
 
               <Reveal delay={80}>
-                <h1 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:mt-5 lg:text-6xl lg:text-primary-deep">
+                <h1 className="hidden sm:block mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:mt-5 lg:text-6xl lg:text-primary-deep">
                   PVC stolarija za vaš dom
                 </h1>
               </Reveal>
@@ -158,54 +165,45 @@ function Pocetna() {
       </section>
 
       {/* O NAMA / UVOD */}
-      {/* <Section>
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHeading
-              eyebrow="O nama"
-              title="Više od 20 godina iskustva"
-              subtitle=""
-            />
-            <Reveal delay={80} className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                "Više od 20 godina iskustva",
-                "Kvalitetni Kömmerling profili",
-                "Profesionalna ugradnja",
-                "Pouzdana usluga",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl border border-border bg-card px-4 py-3 text-sm font-medium text-primary-deep shadow-card"
-                >
-                  {item}
-                </div>
-              ))}
-            </Reveal>
-            <Reveal delay={140} className="mt-8">
-              <Link to="/o-nama" className={buttonStyles.outline}>
-                Saznajte više o nama
-              </Link>
-            </Reveal>
+      <Section>
+        <SectionHeading eyebrow="O obrtu BRANE-MONT" title="Stolarija kojoj vjerujete od 2008." subtitle="Ovlašteni franšizni partner tvrtke TROHA-DIL. Nudimo vrhunske Kömmerling PVC profile uz stručnu ugradnju i završne radove." />
+
+        {/* BRZI SVOJSTVA / BROJKE (Kompaktna mreža idealna za mobitel) */}
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+          <div className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border text-center">
+            <Award className="h-5 w-5 text-primary mb-1" />
+            <span className="text-lg font-bold text-primary-deep sm:text-xl">15+ god</span>
+            <span className="text-[11px] text-muted-foreground">Iskustva</span>
           </div>
-          <Reveal delay={120} className="relative">
-            <img
-              src={images.oNama}
-              alt="Majstor ugrađuje bijeli PVC prozor u obiteljskoj kući"
-              loading="lazy"
-              decoding="async"
-              width={1400}
-              height={1000}
-              className="w-full rounded-md object-cover shadow-lift"
-            />
-            <div className="absolute -bottom-6 left-6 hidden rounded-md bg-primary px-6 py-5 text-primary-foreground shadow-lift sm:block">
-              <p className="font-display text-3xl">20+</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/80">
-                godina iskustva
-              </p>
-            </div>
-          </Reveal>
+
+          <div className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border text-center">
+            
+            <Wrench className="h-5 w-5 text-primary mb-1" />
+           <span className="text-lg font-bold text-primary-deep sm:text-xl">Kömmerling</span>
+            <span className="text-[11px] text-muted-foreground">Vrhunski profili</span>
+          </div>
+
+          <div className="col-span-2 sm:col-span-1 flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border text-center">
+              <ShieldCheck className="h-5 w-5 text-primary mb-1" />
+              <span className="text-lg font-bold text-primary-deep sm:text-xl">TROHA-DIL</span>
+            <span className="text-[11px] text-muted-foreground">Partner</span>
+           
+          </div>
         </div>
-      </Section> */}
+
+        {/* LINK PROČITAJ VIŠE */}
+        <div className="mt-6 text-center">
+          <Link
+            to="/o-nama"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-deep transition-colors sm:text-sm"
+          >
+            <span>Pročitaj više o nama</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+      {/* </div> */}
+    </Section>
 
       {/* PROIZVODI */}
       <Section tone="muted">
@@ -267,7 +265,7 @@ function Pocetna() {
         </Reveal>
       </Section>
 
-      {/* ZAŠTO MI */}
+      {/* ZAŠTO MI
       <Section>
         <SectionHeading eyebrow="Zašto Brane-mont" title="Zašto odabrati nas" align="center" />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -288,7 +286,7 @@ function Pocetna() {
             );
           })}
         </div>
-      </Section>
+      </Section> */}
 
       {/* KATALOG */}
       {/* <CatalogSection /> */}

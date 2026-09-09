@@ -19,6 +19,7 @@ import logo from "@/assets/branemont-logo.png";
 import trohadillogo from "@/assets/troha-dil-logo.png";
 import handshake from "@/assets/handshake.png";
 import okvirProzora from "@/assets/okvir_prozora_grafika.png";
+import trohaDilBijeli from "@/assets/troha-dil-bijeli.png";
 
 export const company = {
   name: "Brane-mont",
@@ -42,7 +43,8 @@ export const images = {
   logo: logo,
   trohadillogo: trohadillogo,
   handshake: handshake,
-  okvirProzora: okvirProzora
+  okvirProzora: okvirProzora,
+  trohaDilBijeli: trohaDilBijeli
 };
 
 /**
