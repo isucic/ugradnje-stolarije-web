@@ -99,7 +99,9 @@ function Pocetna() {
             <div className="max-w-2xl text-center text-white lg:col-span-6 lg:text-left lg:text-primary-deep">
               <Reveal delay={80}>
                 <div className="mt-4 w-full flex justify-center lg:justify-start">
-                  <img src={images.trohaDilBijeli} alt="Troha-Dil" className="my-4 h-8 lg:invert" />
+                  <img src={images.trohaDilBijeli} alt="Troha-Dil" className="my-4 h-8 lg:invert lg:hidden" />
+                  <img src={images.trohadillogo} alt="Troha-Dil" className="my-4 h-8 hidden lg:block" />
+                  
                 </div>
               </Reveal>
 
