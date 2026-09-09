@@ -81,42 +81,63 @@ function Pocetna() {
       </section> */}
 
       {/* HERO */}
-      <section className="relative isolate flex min-h-[86vh] items-center overflow-hidden py-12">
-        <div className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="relative isolate flex min-h-[85vh] items-center justify-center overflow-hidden py-12 lg:py-16">
+        {/* MOBILNA POZADINA: Slika projekta s tamnim preklopom (Samo na mobitelu) */}
+        <div className="absolute inset-0 z-0 lg:hidden">
+          <img
+            src={images.hero}
+            alt="PVC stolarija projekt"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px]" />
+        </div>
+
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-            {/* LIJEVA STRANA: Tekst i gumbi */}
-            <div className="max-w-2xl text-primary-deep lg:col-span-6">
+            {/* TEKST I GUMBI (Na mobitelu bijeli tekst na pozadini, na desktopu tamni tekst) */}
+            <div className="max-w-2xl text-center text-white lg:col-span-6 lg:text-left lg:text-primary-deep">
               <Reveal>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary-deep/75">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/80 lg:text-primary-deep/75">
                   {company.city} · Dalmacija
                 </p>
               </Reveal>
+
               <Reveal delay={80}>
-                <h1 className="mt-5 text-4xl text-primary-deep leading-[1.08] sm:text-5xl lg:text-6xl">
+                <h1 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:mt-5 lg:text-6xl lg:text-primary-deep">
                   PVC stolarija za vaš dom
                 </h1>
               </Reveal>
+
               <Reveal delay={160}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-deep/85">
+                <p className="mt-4 text-base leading-relaxed text-white/90 sm:text-lg lg:mt-6 lg:text-primary-deep/85">
                   Više od 20 godina iskustva u ugradnji kvalitetne PVC stolarije.
                 </p>
               </Reveal>
-              <Reveal delay={240} className="mt-9 flex flex-wrap gap-3">
-                <Link to="/kontakt" className={buttonStyles.primary}>
+
+              <Reveal
+                delay={240}
+                className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start"
+              >
+                <Link
+                  to="/kontakt"
+                  className={`${buttonStyles.primary} w-full text-center sm:w-auto`}
+                >
                   Zatražite ponudu
                 </Link>
-                <Link to="/projekti" className={buttonStyles.outline}>
+                <Link
+                  to="/projekti"
+                  className={`${buttonStyles.outline} w-full text-center sm:w-auto bg-white/10 text-white border-white hover:bg-white/20 lg:bg-transparent lg:text-primary-deep lg:border-primary-deep`}
+                >
                   Pogledajte naše projekte
                 </Link>
               </Reveal>
             </div>
 
-            {/* DESNA STRANA: Prozor i slika projekta */}
-            <div className="relative flex justify-center lg:col-span-6">
-              {/* Kontejner prati prirodnu veličinu okvira (w-fit / inline-block) */}
-              <Reveal delay={100} className="relative inline-block w-full- h-full">
-                {/* Slika projekta - prilagođava se veličini okvira uz object-cover */}
-                <div className="absolute inset-0 overflow-hidden rounded-sm">
+            {/* DESNA STRANA: Prozor sa slikom (Samo na velikim ekranima) */}
+            <div className="hidden justify-center lg:col-span-6 lg:flex">
+              <Reveal delay={100} className="relative inline-block w-full max-w-[520px]">
+                {/* Slika unutar okvira */}
+                <div className="absolute inset-[6%] overflow-hidden rounded-sm">
                   <img
                     src={images.hero}
                     alt="Pogled na naš projekt kroz prozor"
@@ -124,11 +145,11 @@ function Pocetna() {
                   />
                 </div>
 
-                {/* Okvir prozora - diktira prirodni ratio i dimenzije kontejnera */}
+                {/* Okvir prozora */}
                 <img
                   src={images.okvirProzora}
                   alt="Okvir prozora"
-                  className="pointer-events-none relative z-10 h-[600px] w-full"
+                  className="pointer-events-none relative z-10 block h-auto w-full object-contain"
                 />
               </Reveal>
             </div>
