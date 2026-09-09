@@ -165,34 +165,44 @@ function Pocetna() {
       </section>
 
       {/* O NAMA / UVOD */}
-      <Section>
-        <SectionHeading eyebrow="O obrtu BRANE-MONT" title="Stolarija kojoj vjerujete od 2008." subtitle="Ovlašteni franšizni partner tvrtke TROHA-DIL. Nudimo vrhunske Kömmerling PVC profile uz stručnu ugradnju i završne radove." />
+      <Section className="py-10">
+        <SectionHeading
+          eyebrow="O obrtu BRANE-MONT"
+          title="Stolarija kojoj vjerujete od 2008."
+          subtitle="Ovlašteni franšizni partner tvrtke TROHA-DIL. Nudimo vrhunske Kömmerling PVC profile uz stručnu ugradnju i završne radove."
+        />
 
-        {/* BRZI SVOJSTVA / BROJKE (Kompaktna mreža idealna za mobitel) */}
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
-          <div className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border text-center">
-            <Award className="h-5 w-5 text-primary mb-1" />
-            <span className="text-lg font-bold text-primary-deep sm:text-xl">15+ god</span>
-            <span className="text-[11px] text-muted-foreground">Iskustva</span>
-          </div>
+        <div className="grid grid-cols-2 gap-6 text-center py-15 sm:grid-cols-3 sm:gap-8">
+          <Reveal delay={0}>
+            <span className="font-display text-2xl font-bold text-primary-deep sm:text-4xl">
+              15+ godina
+            </span>
+            <p className="mt-2 text-xs text-muted-foreground sm:text-sm">
+              Tradicije i iskustva u ugradnji
+            </p>
+          </Reveal>
 
-          <div className="flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border text-center">
-            
-            <Wrench className="h-5 w-5 text-primary mb-1" />
-           <span className="text-lg font-bold text-primary-deep sm:text-xl">Kömmerling</span>
-            <span className="text-[11px] text-muted-foreground">Vrhunski profili</span>
-          </div>
+          <Reveal delay={80}>
+            <span className="font-display text-2xl font-bold text-primary-deep sm:text-4xl">
+              TROHA-DIL
+            </span>
+            <p className="mt-2 text-xs text-muted-foreground sm:text-sm">
+              Ovlašteni franšizni partner
+            </p>
+          </Reveal>
 
-          <div className="col-span-2 sm:col-span-1 flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg bg-secondary/50 border border-border text-center">
-              <ShieldCheck className="h-5 w-5 text-primary mb-1" />
-              <span className="text-lg font-bold text-primary-deep sm:text-xl">TROHA-DIL</span>
-            <span className="text-[11px] text-muted-foreground">Partner</span>
-           
-          </div>
+          <Reveal delay={160} className="col-span-2 sm:col-span-1">
+            <span className="font-display text-2xl font-bold text-primary-deep sm:text-4xl">
+              Kömmerling
+            </span>
+            <p className="mt-2 text-xs text-muted-foreground sm:text-sm">
+              Vrhunski njemački PVC profili
+            </p>
+          </Reveal>
         </div>
 
         {/* LINK PROČITAJ VIŠE */}
-        <div className="mt-6 text-center">
+        <div className="mt-2 text-center">
           <Link
             to="/o-nama"
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary-deep transition-colors sm:text-sm"
@@ -201,9 +211,7 @@ function Pocetna() {
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-
-      {/* </div> */}
-    </Section>
+      </Section>
 
       {/* PROIZVODI */}
       <Section tone="muted">
