@@ -11,6 +11,7 @@ import { company, images, products, whyUs } from "@/data/site";
 import { cn } from "@/lib/utils";
 import HandshakeIcon from "@/components/HandshakeIcon";
 import { ShieldCheck, Wrench } from "lucide-react";
+import Gallery from "@/components/GallerySection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,9 +100,16 @@ function Pocetna() {
             <div className="max-w-2xl text-center text-white lg:col-span-6 lg:text-left lg:text-primary-deep">
               <Reveal delay={80}>
                 <div className="mt-4 w-full flex justify-center lg:justify-start">
-                  <img src={images.trohaDilBijeli} alt="Troha-Dil" className="my-4 h-8 lg:invert lg:hidden" />
-                  <img src={images.trohadillogo} alt="Troha-Dil" className="my-4 h-8 hidden lg:block" />
-                  
+                  <img
+                    src={images.trohaDilBijeli}
+                    alt="Troha-Dil"
+                    className="my-4 h-8 lg:invert lg:hidden"
+                  />
+                  <img
+                    src={images.trohadillogo}
+                    alt="Troha-Dil"
+                    className="my-4 h-8 hidden lg:block"
+                  />
                 </div>
               </Reveal>
 
@@ -274,29 +282,6 @@ function Pocetna() {
           </Link>
         </Reveal>
       </Section>
-
-      {/* ZAŠTO MI
-      <Section>
-        <SectionHeading eyebrow="Zašto Brane-mont" title="Zašto odabrati nas" align="center" />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {whyUs.map((item, index) => {
-            const Icon = whyIcons[index] ?? Award;
-            return (
-              <Reveal
-                key={item.title}
-                delay={index * 80}
-                className="group rounded-md border border-border bg-card p-6 text-center shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
-              >
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-sm bg-secondary text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <h3 className="mt-5 text-lg text-primary-deep">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-              </Reveal>
-            );
-          })}
-        </div>
-      </Section> */}
 
       {/* KATALOG */}
       {/* <CatalogSection /> */}

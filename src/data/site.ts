@@ -8,7 +8,7 @@ import oNamaSlika from "@/assets/o-nama.jpg";
 import profilSlika from "@/assets/kommerling.png";
 import pvcProzori from "@/assets/pvc-prozori.jpg";
 import pvcVrata from "@/assets/pvc-vrata.jpg";
-import klizneStijene from "@/assets/klizne-stijene.jpg";
+import klizneStijene from "@/assets/web_klizna_1.jpg";
 import komarnici from "@/assets/komarnici.jpg";
 import grilje from "@/assets/grilje.jpg";
 import rolete from "@/assets/rolete.jpg";
@@ -20,6 +20,8 @@ import trohadillogo from "@/assets/troha-dil-logo.png";
 import handshake from "@/assets/handshake.png";
 import okvirProzora from "@/assets/okvir_prozora_grafika.png";
 import trohaDilBijeli from "@/assets/troha-dil-bijeli.png";
+
+import prozori1 from "@/assets/prozor_i_roleta.jpg";
 
 export const company = {
   name: "Brane-mont",
@@ -72,6 +74,26 @@ export type Product = {
   gallery: { src: string; alt: string }[];
 };
 
+const productModules = import.meta.glob("@/assets/galerija/**/*.{jpg,jpeg,png,webp}", {
+  eager: true,
+});
+
+// 2. Pomoćna funkcija koja automatski dohvaća slike za konkretni proizvod na temelju njegovog slug-a
+const getProductImages = (slug: string) => {
+  const matches = Object.entries(productModules)
+    .filter(([path]) => path.includes(`/galerija/${slug}/`))
+    .map(([path, module]) => {
+      const fileNameWithExt = path.split("/").pop() || "";
+      const fileName = fileNameWithExt.split(".")[0] || "slika";
+      return {
+        src: (module as { default: string }).default,
+        alt: `${slug.replace(/-/g, " ")} - ${fileName.replace(/-/g, " ")}`,
+      };
+    });
+
+  return matches;
+};
+
 export const products: Product[] = [
   {
     slug: "pvc-prozori",
@@ -89,11 +111,7 @@ export const products: Product[] = [
     ],
     placeholderNote:
       "Ovdje će biti dodane detaljnije informacije o izvedbama, bojama i opremi prozora.",
-    gallery: [
-      { src: pvcProzori, alt: "PVC prozori u dnevnom boravku" },
-      { src: projekt1, alt: "Ugrađeni PVC prozori na pročelju obiteljske kuće" },
-      { src: projekt2, alt: "PVC balkonska vrata s pogledom na more" },
-    ],
+    gallery: getProductImages("prozori"),
   },
   {
     slug: "pvc-vrata",
@@ -111,11 +129,8 @@ export const products: Product[] = [
     ],
     placeholderNote:
       "Ovdje će biti dodane detaljnije informacije o modelima ispuna, okovu i bojama vrata.",
-    gallery: [
-      { src: pvcVrata, alt: "Ulazna PVC vrata na kući" },
-      { src: projekt2, alt: "PVC balkonska vrata otvorena prema terasi" },
-      { src: projekt1, alt: "Pročelje kuće s novom PVC stolarijom" },
-    ],
+        gallery: getProductImages("ulaznaVrata"),
+
   },
   {
     slug: "pvc-klizne-stijene",
@@ -133,11 +148,7 @@ export const products: Product[] = [
     ],
     placeholderNote:
       "Ovdje će biti dodane detaljnije informacije o tipovima kliznih sustava i dostupnim dimenzijama.",
-    gallery: [
-      { src: klizneStijene, alt: "Klizna stijena prema terasi" },
-      { src: projekt3, alt: "Klizna stijena u stanu s pogledom na obalu" },
-      { src: projekt2, alt: "Otvoreni izlaz na terasu" },
-    ],
+    gallery: getProductImages("klizneStijene"),
   },
   {
     slug: "komarnici",
@@ -155,10 +166,7 @@ export const products: Product[] = [
     ],
     placeholderNote:
       "Ovdje će biti dodane detaljnije informacije o vrstama komarnika (fiksni, klizni, rolo).",
-    gallery: [
-      { src: komarnici, alt: "Komarnik na prozoru" },
-      { src: pvcProzori, alt: "Prozori pripremljeni za ugradnju komarnika" },
-    ],
+    gallery: getProductImages("komarnici"),
   },
   {
     slug: "grilje",
@@ -176,10 +184,7 @@ export const products: Product[] = [
     ],
     placeholderNote:
       "Ovdje će biti dodane detaljnije informacije o izvedbama i načinima otvaranja grilja.",
-    gallery: [
-      { src: grilje, alt: "Grilje na kamenoj kući" },
-      { src: projekt1, alt: "Pročelje kuće sa stolarijom i zaštitom od sunca" },
-    ],
+    gallery: getProductImages("grilje"),
   },
   {
     slug: "rolete",
@@ -197,10 +202,7 @@ export const products: Product[] = [
     ],
     placeholderNote:
       "Ovdje će biti dodane detaljnije informacije o vrstama roleta i načinima upravljanja.",
-    gallery: [
-      { src: rolete, alt: "Vanjske rolete na pročelju" },
-      { src: pvcProzori, alt: "Prozori s pripremom za rolete" },
-    ],
+    gallery: getProductImages("rolete"),
   },
 ];
 
@@ -228,16 +230,15 @@ export const galleryCategories = [
 
 /** Zamijenite ove slike stvarnim fotografijama projekata. */
 export const gallery: GalleryItem[] = [
-  { src: projekt1, alt: "Ugrađeni PVC prozori na pročelju obiteljske kuće", category: "PVCProzori" },
   { src: projekt2, alt: "PVC balkonska vrata s izlazom na terasu i pogledom na more", category: "PVC Vrata" },
   { src: projekt3, alt: "PVC klizna stijena u stanu s pogledom na obalu", category: "PVC Klizne stijene" },
-  { src: pvcProzori, alt: "PVC prozori u svijetlom dnevnom boravku", category: "PVC Prozori" },
   { src: rolete, alt: "Vanjske rolete na prozorima obiteljske kuće", category: "PVC Rolete" },
   { src: komarnici, alt: "Komarnik ugrađen na prozor", category: "Komarnici" },
   { src: grilje, alt: "Grilje na prozoru kamene kuće", category: "PVC i Alu grilje" },
   { src: klizneStijene, alt: "Klizna stijena prema terasi s pogledom na more", category: "Klizne stijene" },
   { src: pvcVrata, alt: "Ulazna PVC vrata na obiteljskoj kući", category: "PVC Vrata" },
   {src: pvcProzori, alt: "PVC prozori u dnevnom boravku", category: "Kuće i zgrade" },
+  { src: prozori1, alt: "Trokrilni PVC prozor s vanjskom roletom", category: "PVC Prozori" },
 ];
 
 export const faq = [
@@ -291,6 +292,6 @@ export const navigation = [
   { label: "O nama", to: "/o-nama" },
   { label: "Proizvodi", to: "/proizvodi" },
   { label: "Projekti", to: "/projekti" },
-  { label: "FAQ", to: "/faq" },
+  // { label: "FAQ", to: "/faq" },
   { label: "Kontakt", to: "/kontakt" },
 ] as const;
