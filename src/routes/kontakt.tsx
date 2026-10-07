@@ -38,7 +38,7 @@ function Kontakt() {
         </Reveal>
       </Section>
 
-      <Section className="pt-10 sm:pt-12">
+      <Section className="pt-5 lg:pt-5 md:pt-5 sm:pt-5">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <Reveal className="mb-6 rounded-xl border border-border bg-secondary/60 p-5 text-sm leading-relaxed text-muted-foreground">

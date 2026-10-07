@@ -6,7 +6,7 @@ import { company, navigation, products } from "@/data/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 bg-primary-deep text-primary-foreground">
+    <footer className="mt-5 bg-primary-deep text-primary-foreground">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-display text-2xl font-semibold">{company.name}</p>
@@ -22,7 +22,10 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             {navigation.map((item) => (
               <li key={item.to}>
-                <Link to={item.to} className="text-primary-foreground/85 transition-colors hover:text-primary-foreground">
+                <Link
+                  to={item.to}
+                  className="text-primary-foreground/85 transition-colors hover:text-primary-foreground"
+                >
                   {item.label}
                 </Link>
               </li>
@@ -60,7 +63,10 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-              <a href={`mailto:${company.email}`} className="break-all hover:text-primary-foreground">
+              <a
+                href={`mailto:${company.email}`}
+                className="break-all hover:text-primary-foreground"
+              >
                 {company.email}
               </a>
             </li>

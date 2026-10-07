@@ -110,7 +110,7 @@ export const products: Product[] = [
       "Dogovor oko rješenja prije narudžbe",
     ],
     placeholderNote:
-      "Ovdje će biti dodane detaljnije informacije o izvedbama, bojama i opremi prozora.",
+      "Mogućnost ugradnje troslojnog stakla za maksimalnu uštedu energije i toplinu doma. Dostupno u klasičnoj bijeloj boji, elegantim antracit tonovima te imitacijama drva koje se uklapaju u svaki stil",
     gallery: getProductImages("prozori"),
   },
   {
@@ -118,17 +118,17 @@ export const products: Product[] = [
     name: "PVC vrata",
     short: "Ulazna i balkonska PVC vrata prilagođena vašem objektu.",
     intro:
-      "PVC vrata izrađujemo i ugrađujemo za ulaze, balkone i terase. Rješenje dogovaramo prema izgledu objekta i vašim željama, uz izmjeru na terenu.",
+      "Svaka ulazna vrata izrađujemo prateći vaše želje i specifičnosti objekta. Na terenu radimo precizne izmjere kako biste dobili najbolje tehničko i estetsko rješenje.",
     image: pvcVrata,
     alt: "Bijela ulazna PVC vrata sa staklenim poljem na pročelju kuće",
     benefits: [
-      "Ulazna i balkonska izvedba",
-      "Kömmerling profili",
-      "Izmjera i ugradnja na objektu",
-      "Usklađivanje s ostalom stolarijom",
+      "Kömmerling sustavi 76 AD i 88 za maksimalnu toplinu i mir.",
+      "Brave sa sigurnosnim masivnim kljunovima u standardnoj opremi.",
+      "Pocinčana čelična ojačanja za dugotrajnu stabilnost",
+      "Više stotina modela s ukrasnim panelima",
     ],
     placeholderNote:
-      "Ovdje će biti dodane detaljnije informacije o modelima ispuna, okovu i bojama vrata.",
+      "U ponudi imamo nekoliko stotina različitih modela s ukrasnim panelima prilagođenih vašem stilu. Svaka vrata standardno opremamo vrhunskim bravama sa sigurnosnim masivnim kljunovima (bez dodatne nadoplate), spojnicama visoke nosivosti do 120 kg te snažnim pocinčanim čeličnim ojačanjima u krilu i okviru za maksimalnu stabilnost.",
         gallery: getProductImages("ulaznaVrata"),
 
   },
@@ -137,17 +137,18 @@ export const products: Product[] = [
     name: "PVC klizne stijene",
     short: "Velike staklene površine za izlaz na terasu ili vrt.",
     intro:
-      "Klizne stijene omogućuju velike staklene otvore i jednostavan prijelaz iz prostora na terasu ili vrt. Izvedbu i dimenzije dogovaramo prema mogućnostima vašeg objekta.",
+      "Klizne stijene omogućuju spajanje unutarnjeg prostora s terasama i vrtovima uz osiguravanje maksimalne količine prirodne svjetlosti. Proizvodi se izrađuju prema preciznim dimenzijama otvora na objektu, uz izlazak na teren i tehničku prilagodbu svakom građevinskom projektu.",
     image: klizneStijene,
     alt: "Bijela PVC klizna stijena s pogledom na more",
     benefits: [
       "Velike staklene površine",
-      "Kömmerling profili",
-      "Izvedba po mjeri otvora",
-      "Profesionalna ugradnja",
+      "Konstrukcija prilagođena učestalom otvaranju i zatvaranju",
+      "Niski prag na podizno kliznim sustavima olakšava prolaz bez visinskih prepreka.",
+      "Dimenzioniranje i ugradnja prema specifičnim uvjetima i mjerama na objektu.",
     ],
-    placeholderNote:
-      "Ovdje će biti dodane detaljnije informacije o tipovima kliznih sustava i dostupnim dimenzijama.",
+placeholderNote: `Otklopno-klizni sustav (PSK): Kömmerling 76 MD i 88 profili s funkcijom otklapanja i paralelnog klizanja.
+Podizno-klizni sustav (HS): Namijenjen velikim staklenim površinama s niskim pragom za lakši prolaz.
+Mogućnost ugradnje dvoslojnog ili troslojnog IZO stakla, prilagođeno točnim mjerama otvora na objektu.`,
     gallery: getProductImages("klizneStijene"),
   },
   {
@@ -162,10 +163,9 @@ export const products: Product[] = [
       "Izrada po mjeri otvora",
       "Za prozore i za vrata",
       "Moguća ugradnja i na postojeću stolariju",
-      "Jednostavno održavanje",
     ],
     placeholderNote:
-      "Ovdje će biti dodane detaljnije informacije o vrstama komarnika (fiksni, klizni, rolo).",
+      "U ponudi su fiksne i rolo izvedbe. Fiksni komarnici montiraju se kao zaseban element na prozor. Rolo komarnici se u roleti ne mogu montirati naknadno, već isključivo u isto vrijeme kada i rolete, stoga je planiranje ugradnje potrebno uskladiti prije same narudžbe.",
     gallery: getProductImages("komarnici"),
   },
   {
@@ -173,17 +173,17 @@ export const products: Product[] = [
     name: "Grilje",
     short: "Klasična zaštita od sunca u dalmatinskom stilu.",
     intro:
-      "Grilje su tradicionalno rješenje za zasjenjenje i zaštitu prozora, česta na objektima u priobalju. Izvedbu usklađujemo s izgledom objekta i ostalom stolarijom.",
+      "Grilje su tradicionalno rješenje za zasjenjenje i zaštitu prozora, česta na objektima u Dalmaciji. Izvedbu usklađujemo s izgledom objekta i ostalom stolarijom.",
     image: grilje,
     alt: "Bijele grilje na prozoru kamene dalmatinske kuće",
     benefits: [
-      "Zaštita od sunca i pogleda",
-      "Usklađivanje s izgledom objekta",
-      "Izrada po mjeri",
-      "Profesionalna ugradnja",
+      "Fiksne lamele za više svjetlosti",
+      "Pomične lamele za potpuno zamračivanje",
+      "Velik izbor oblika: standardne, lučne, harmo i fasadne izvedbe",
+      "Izrada po mjeri"
     ],
-    placeholderNote:
-      "Ovdje će biti dodane detaljnije informacije o izvedbama i načinima otvaranja grilja.",
+placeholderNote: 
+      "Grilje se izrađuju s fiksnim ili pomičnim lamelama, pri čemu fiksne lamele propuštaju više svjetlosti, dok pomične omogućuju potpuno zamračivanje prostora. Uz standardne izvedbe, dostupne su lučne, harmo, fasadne i grilje na zaključavanje u PVC izvedbi ili aluminijskoj izvedbi s bojama prema RAL karti, kao i u imitaciji drveta. Za otpornost na uvjete na obali koristi se masivan Maco okov izrađen od kvalitetnih i dodatno plastificiranih materijala. Grilje se mogu ugraditi istovremeno s prozorima ili naknadno na već postojeće otvore, uz opciju odabira bijelog ili crnog okova.",
     gallery: getProductImages("grilje"),
   },
   {
@@ -191,17 +191,17 @@ export const products: Product[] = [
     name: "Rolete",
     short: "Zasjenjenje i dodatna zaštita otvora.",
     intro:
-      "Rolete ugrađujemo uz novu stolariju ili naknadno, kao rješenje za zasjenjenje i dodatnu zaštitu otvora.",
+      "Proizvodnja i ugradnja unutarnjih Kömmerling Vari nova roleta i vanjskih roleta s aluminijskom kutijom, uz izbor PVC ili aluminijskih lamela i raznih načina upravljanja.",
     image: rolete,
     alt: "Bijele vanjske rolete spuštene preko prozora moderne kuće",
     benefits: [
       "Zasjenjenje prostora",
       "Dodatna zaštita otvora",
       "Izrada po mjeri",
-      "Ugradnja uz novu ili postojeću stolariju",
+      "Fleksibilne opcije upravljanja ručnim rolet-automatom, kurblom ili elektromotorom.",
     ],
-    placeholderNote:
-      "Ovdje će biti dodane detaljnije informacije o vrstama roleta i načinima upravljanja.",
+  placeholderNote:
+   "U ponudi su unutarnje rolete Kömmerling Vari nova koje se ugrađuju tijekom proizvodnje i montiraju istovremeno s prozorima, te vanjske rolete s alu kutijom koje se mogu ugraditi naknadno na već montirane prozore. Unutarnje rolete zahtijevaju planiranje prostora za kutiju prije gradnje kako se ne bi smanjio svjetlosni otvor. Lamele su dostupne u PVC ili aluminijskoj izvedbi u različitim bojama, uz mogućnost upravljanja pomoću rolet-automata, kurble ili elektromotora, kao i izvedbu roleta na izbačaj koja omogućuje istovremeno prozračivanje i zamračivanje.",
     gallery: getProductImages("rolete"),
   },
 ];

@@ -271,8 +271,8 @@ function Pocetna() {
       {/* PROJEKTI */}
       <Section tone="muted">
         <SectionHeading
-          eyebrow="Projekti"
-          title="Reference"
+          eyebrow="Reference"
+          title="Projekti"
           subtitle="Pregled dosadašnjih realizacija Brane-monta."
         />
         <ProjectGallery />

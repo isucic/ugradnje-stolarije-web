@@ -36,7 +36,7 @@ function Projekti() {
         </Reveal>
       </Section>
 
-      <Section className="pt-10 sm:pt-12">
+      <Section className="pt-0 sm:pt-12 lg:pt-0">
         <ProjectGallery />
       </Section>
 

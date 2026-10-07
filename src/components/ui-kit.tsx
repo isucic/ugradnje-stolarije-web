@@ -19,7 +19,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "py-16 sm:py-20 lg:py-24",
+        "py-8 sm:py-12",
         tone === "muted" && "bg-secondary/60",
         tone === "deep" && "bg-primary-deep text-primary-foreground",
         className,
@@ -74,9 +74,18 @@ const baseButton =
   "inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3 text-base font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60";
 
 export const buttonStyles = {
-  primary: cn(baseButton, "bg-primary text-primary-foreground shadow-card hover:-translate-y-0.5 hover:bg-primary-deep"),
-  outline: cn(baseButton, "border border-primary/30 bg-background text-primary hover:-translate-y-0.5 hover:border-primary hover:bg-secondary"),
-  ghostLight: cn(baseButton, "border border-primary-foreground/40 text-primary-foreground hover:-translate-y-0.5 hover:bg-primary-foreground/10"),
+  primary: cn(
+    baseButton,
+    "bg-primary text-primary-foreground shadow-card hover:-translate-y-0.5 hover:bg-primary-deep",
+  ),
+  outline: cn(
+    baseButton,
+    "border border-primary/30 bg-background text-primary hover:-translate-y-0.5 hover:border-primary hover:bg-secondary",
+  ),
+  ghostLight: cn(
+    baseButton,
+    "border border-primary-foreground/40 text-primary-foreground hover:-translate-y-0.5 hover:bg-primary-foreground/10",
+  ),
   light: cn(baseButton, "bg-primary-foreground text-primary-deep hover:-translate-y-0.5"),
 };
 
