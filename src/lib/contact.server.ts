@@ -2,7 +2,9 @@ import { z } from "zod";
 
 import { quoteSchema } from "./contact-schema";
 
-const PRIMATELJ = "brane-mont@st.t-com.hr";
+// const PRIMATELJ = "brane-mont@st.t-com.hr";
+
+const PRIMATELJ = "ivana.suciic@gmail.com";
 
 function escapeHtml(value: string) {
   return value
